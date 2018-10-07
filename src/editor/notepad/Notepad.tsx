@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './Notepad.css';
 
-interface ITheme {
+export interface ITheme {
     backgroundColor?: string;
     color?: string;
 }

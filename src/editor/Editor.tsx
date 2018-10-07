@@ -1,12 +1,27 @@
 import * as React from 'react';
-import Notepad from './notepad/Notepad';
+import Notepad, { IProps as NotepadProps, ITheme as NotepadTheme } from './notepad/Notepad';
 
 import './Editor.css';
 
-const Editor: React.SFC = () => (
+// tslint:disable-next-line:no-empty-interface
+interface IEditorProps extends NotepadProps { }
+
+const EditorComp: React.SFC<IEditorProps> = (props: IEditorProps) => (
     <div className='editor-container'>
-        <Notepad />
+        <Notepad {...props} />
     </div>
 );
+
+class Editor {
+    private theme: NotepadTheme;
+
+    constructor(theme: NotepadTheme) {
+        this.theme = theme;
+    }
+
+    public renderEditor(content: string): JSX.Element {
+        return <EditorComp {...this.theme} content={content} />;
+    }
+}
 
 export default Editor;

@@ -3,9 +3,11 @@ import './App.css';
 import Editor from './editor';
 
 class App extends React.Component {
+  private editor = new Editor({});
+
   public render() {
     return (
-      <Editor />
+      this.editor.renderEditor('Hi')
     );
   }
 }
