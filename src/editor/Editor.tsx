@@ -13,9 +13,7 @@ const EditorComp: React.SFC<IEditorProps> = (props: IEditorProps) => (
 );
 
 class Editor {
-    private theme: NotepadTheme;
-
-    constructor(theme: NotepadTheme) {
+    constructor(private readonly theme: NotepadTheme) {
         this.theme = theme;
     }
 

@@ -7,7 +7,7 @@ class App extends React.Component {
 
   public render() {
     return (
-      this.editor.renderEditor('Hi')
+      this.editor.renderEditor('Hi 😀')
     );
   }
 }

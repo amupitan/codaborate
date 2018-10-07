@@ -26,7 +26,7 @@ const defaultTheme: ITheme = {
 
 Notepad.defaultProps = {
     ...defaultTheme,
-    content: 'Hello World!',
+    content: 'Hello World! 😀',
 };
 
 export default Notepad;
