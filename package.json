@@ -1,6 +1,6 @@
 {
   "name": "codaborate",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "react": "^16.5.2",
@@ -12,7 +12,7 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "lint": "tslint -c ./tslint.json 'src/**/*.{ts,tsx}'",
+    "lint": "tslint -c ./tslint.json -p ./tsconfig.json",
     "debug": "react-devtools"
   },
   "devDependencies": {
@@ -22,6 +22,8 @@
     "@types/react-dom": "^16.0.8",
     "react-devtools": "^3.3.4",
     "react-devtools-core": "^3.3.4",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
     "typescript": "^3.1.1"
   }
 }

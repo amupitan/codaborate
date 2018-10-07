@@ -1,10 +1,65 @@
 {
-  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-config-prettier"
+  ],
   "linterOptions": {
     "exclude": [
+      "src/registerServiceWorker.ts",
       "config/**/*.js",
       "node_modules/**/*.ts",
       "coverage/lcov-report/*.js"
     ]
+  },
+  "rules": {
+    "max-line-length": {
+      "options": [
+        120
+      ]
+    },
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape",
+      "avoid-template"
+    ],
+    "import-spacing": true,
+    "no-trailing-whitespace": true,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "always",
+        "singleline": "never"
+      }
+    ],
+    "semicolon": [
+      true,
+      "always",
+      "ignore-interfaces"
+    ],
+    "new-parens": true,
+    "no-arg": true,
+    "no-bitwise": true,
+    "no-conditional-assignment": true,
+    "no-consecutive-blank-lines": false,
+    "no-console": {
+      "severity": "warning",
+      "options": [
+        "debug",
+        "info",
+        "log",
+        "time",
+        "timeEnd",
+        "trace"
+      ]
+    }
+  },
+  "jsRules": {
+    "max-line-length": {
+      "options": [
+        120
+      ]
+    }
   }
 }
